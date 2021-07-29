@@ -1,0 +1,56 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: DEV-1
+      author: platonov
+      changes:
+        - createTable:
+            tableName: users
+            remarks: Юзеры
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: users_pk
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: varchar(50)
+#                  defaultValue: false
+                  constraints:
+                    nullable: false
+#        - createTable:
+#            tableName: releases
+#            remarks: Релиз
+#            columns:
+#              - column:
+#                  name: id
+#                  type: Long
+#                  autoIncrement: true
+#                  constraints:
+#                    primaryKey: true
+#                    primaryKeyName: release_pk
+#                    nullable: false
+#              - column:
+#                  name: version
+#                  type: varchar(50)
+#                  constraints:
+#                    nullable: false
+#              - column:
+#                  name: start_Time
+#                  type: varchar(50)
+#                  constraints:
+#                    nullable: false
+#              - column:
+#                  name: end_Time
+#                  type: varchar(50)
+#                  constraints:
+#                    nullable: false
